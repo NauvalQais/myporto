@@ -36,7 +36,19 @@ body {
         font-size: 16px;
         /* Ukuran font untuk tampilan mobile */
     }
+        /* .cardz {
+            width: 100px;
+        }
+    
+        .cardz::before {
+            width: 106px;
+        }
+    
+        .cardz:hover::before {
+            width: 106px;
+        } */
 
+        
     .txtrak {
         font-size: 10px;
         font-weight: bold;
@@ -384,7 +396,7 @@ footer {
     align-items: center;
     padding: 20px;
     transition: 0.3s;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
     position: relative;
 }
 
@@ -395,7 +407,7 @@ footer {
 }
 
 .features .features-item img {
-    max-width: 25px;
+    max-width: 20px;
     /* Set the maximum width of the image */
     height: auto;
     /* Maintain aspect ratio */
@@ -406,7 +418,7 @@ footer {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 16px;
+    font-size: 10px;
 }
 
 .features .features-item h3 a {
@@ -427,9 +439,10 @@ footer {
     justify-content: center;
     align-items: center;
     /* position: relative; */
-    width: 180px;
+    width: 130px;
     /* Sesuaikan lebar */
-    height: 55px;
+    height: 45px;
+    
     /* Sesuaikan tinggi */
     background: #ffffff;
     border-radius: 10px;
@@ -440,9 +453,9 @@ footer {
 .cardz::before {
     content: "";
     position: absolute;
-    width: 186px;
+    width: 136px;
     /* Sesuaikan lebar */
-    height: 55px;
+    height: 45px;
     /* Sesuaikan tinggi */
     background-color: tomato;
     border-radius: 10px;
@@ -452,9 +465,9 @@ footer {
 }
 
 .cardz:hover::before {
-    width: 186px;
+    width: 136px;
     /* Tetap sama */
-    height: 55px;
+    height: 45px;
     /* Tetap sama */
 }
 
@@ -594,7 +607,7 @@ footer {
     .heading {
         font-size: 26px;
     }
-
+       
     .cardz {
         width: 170px;
     }
@@ -622,7 +635,20 @@ footer {
     .txtbout {
         font-size: 40px;
     }
-
+        .features .features-item img {
+            max-width: 25px;
+            /* Set the maximum width of the image */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+    
+        .features .features-item h3 {
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-size: 16px;
+        }
     .txtrak {
         font-size: 42px;
         font-weight: bold;
