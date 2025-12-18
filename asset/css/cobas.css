@@ -180,8 +180,14 @@ body {
     border: none;
     color: #fff;
     cursor: pointer;
-    background-color: #7d2ae8;
+    background-image: linear-gradient(30deg, var(--pink-dark), var(--pink-main), var(--pink-light));
     transition: all 0.2s ease;
+    display: inline-block;
+    z-index: 1;
+}
+
+.button-menu .button-content {
+    pointer-events: none;
 }
 
 .button-menu:active {
@@ -196,25 +202,28 @@ body {
     left: 50%;
     height: 100%;
     transform: translateX(-50%);
-    z-index: -1000;
+    z-index: -1;
     background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 .button-menu:hover:before {
     top: -70%;
-    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-image: radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, var(--pink-main) 20%, transparent 30%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--pink-main) 15%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--pink-main) 15%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-main) 20%, transparent 20%);
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
         10% 10%, 18% 18%;
     background-position: 50% 120%;
-    animation: greentopBubbles 0.6s ease;
+    animation: greentopBubbles 0.6s ease forwards;
 }
 
 @keyframes greentopBubbles {
@@ -235,18 +244,36 @@ body {
     }
 }
 
-.button-menu:hover::after {
+.button-menu:hover:after {
     bottom: -70%;
-    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-image: radial-gradient(circle, var(--pink-light) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-light) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--pink-light) 15%, transparent 20%),
+        radial-gradient(circle, var(--pink-light) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-light) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-light) 20%, transparent 20%),
+        radial-gradient(circle, var(--pink-light) 20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
     background-position: 50% 0%;
-    animation: greenbottomBubbles 0.6s ease;
+    animation: greenbottomBubbles 0.6s ease forwards;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }
 
 @keyframes greenbottomBubbles {
@@ -355,6 +382,24 @@ body {
     }
 }
 
+/* Section About */
+
+.text-title-about {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(90deg,
+            var(--pink-main),
+            var(--pink-light),
+            #fff,
+            #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
 footer {
     background-color: #d40000;
