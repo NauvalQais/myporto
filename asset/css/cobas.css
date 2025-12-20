@@ -387,6 +387,99 @@ body {
     overflow-x: hidden;
 }
 
+
+
+.btn-about {
+
+    padding: 10px 10px;
+    font-size: 1rem;
+
+    border-radius: 5px;
+
+    color: #ffffff;
+    background-color: var(--pink-main);
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn-about:hover {
+    background-image: linear-gradient(30deg, var(--pink-light), var(--pink-dark), var(--pink-main), var(--pink-light));
+}
+
+.btn-about::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: pink;
+    opacity: 0.8;
+    transition: all 0.5s ease-out;
+}
+
+.btn-about:hover::before {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+}
+
+
+.btn-project {
+    background: transparent;
+    position: relative;
+    padding: 10px 10px;
+
+    font-size: 1rem;
+
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--pink-dark);
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    color: var(--pink-light);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+.btn-project span {
+    margin: 10px;
+}
+
+.btn-project::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-project:hover {
+    color: #fff;
+    border: 1px solid var(--pink-main);
+}
+
+.btn-project:hover::before {
+    box-shadow: inset 0 0 0 10em var(--pink-main);
+}
+
+
+
 .text-title-about {
     font-weight: 900;
     font-size: 3.5rem;
