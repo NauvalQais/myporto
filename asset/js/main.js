@@ -1,243 +1,141 @@
-/**
-* Template Name: Style
-* Template URL: https://bootstrapmade.com/style-bootstrap-portfolio-template/
-* Updated: Jul 02 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+// Portfolio Filter
+document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to top on page load/refresh
+    window.scrollTo(0, 0);
 
-(function() {
-  "use strict";
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCols = document.querySelectorAll('[data-category="project"].col-lg-4');
+    const certCols = document.querySelectorAll('[data-category="certificate"].col-lg-4');
+    const techStackCols = document.querySelectorAll('[data-category="techstack"].col-lg-3');
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
+    // Function to filter cards with animation
+    function filterCards(filterValue) {
+        // Get all visible elements to animate out
+        const allCols = [...projectCols, ...certCols, ...techStackCols];
+        const visibleCols = allCols.filter(col => !col.classList.contains('d-none'));
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
+        // Fade out current items
+        visibleCols.forEach(col => {
+            col.style.opacity = '0';
+            col.style.transform = 'translateY(20px)';
+            col.style.transition = 'all 0.3s ease';
         });
-      }
-    });
-  });
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
-  });
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
+        // After fade out, hide all and show selected category
         setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
+            // Hide all
+            projectCols.forEach(col => {
+                col.classList.add('d-none');
+                col.style.opacity = '0';
+                col.style.transform = 'translateY(20px)';
+            });
+            certCols.forEach(col => {
+                col.classList.add('d-none');
+                col.style.opacity = '0';
+                col.style.transform = 'translateY(20px)';
+            });
+            techStackCols.forEach(col => {
+                col.classList.add('d-none');
+                col.style.opacity = '0';
+                col.style.transform = 'translateY(20px)';
+            });
+
+            // Show selected category
+            setTimeout(() => {
+                let targetCols;
+                if (filterValue === 'project') {
+                    targetCols = projectCols;
+                } else if (filterValue === 'certificate') {
+                    targetCols = certCols;
+                } else if (filterValue === 'techstack') {
+                    targetCols = techStackCols;
+                }
+
+                if (targetCols) {
+                    targetCols.forEach(col => col.classList.remove('d-none'));
+
+                    // Trigger reflow
+                    targetCols[0].offsetHeight;
+
+                    // Fade in with staggered animation
+                    targetCols.forEach((col, index) => {
+                        setTimeout(() => {
+                            col.style.opacity = '1';
+                            col.style.transform = 'translateY(0)';
+                        }, index * 50);
+                    });
+                }
+            }, 50);
+        }, 300);
     }
-  });
 
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+    // Initialize filter on page load
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn) {
+        // Set initial state without animation
+        projectCols.forEach(col => {
+            col.classList.remove('d-none');
+            col.style.opacity = '1';
+            col.style.transform = 'translateY(0)';
+        });
+        certCols.forEach(col => {
+            col.classList.add('d-none');
+            col.style.opacity = '0';
+        });
+        techStackCols.forEach(col => {
+            col.classList.add('d-none');
+            col.style.opacity = '0';
+        });
+    }
 
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
+    // Filter button click handlers
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            filterCards(this.getAttribute('data-filter'));
+        });
+    });
 
-})();
+    // Portfolio card click handler
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('a')) return;
+            console.log('Card clicked:', this.querySelector('h4')?.textContent);
+        });
+    });
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // TODO: Replace with actual form submission logic
+            alert(`Thank you for your message, ${formData.name}! I will get back to you soon.`);
+            console.log('Form submitted:', formData);
+
+            contactForm.reset();
+        });
+
+        // Input focus effects
+        contactForm.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', () => input.parentElement.classList.add('focused'));
+            input.addEventListener('blur', () => {
+                if (!input.value) input.parentElement.classList.remove('focused');
+            });
+        });
+    }
+});
+
+// Scroll to top on page refresh
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
