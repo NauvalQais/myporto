@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Detail</title>
@@ -12,205 +11,255 @@
     <link rel="stylesheet" href="asset/aos/aos.css" />
     <link rel="stylesheet" href="asset/css/cobas.css" />
     <link rel="stylesheet" href="asset/css/detail.css" />
-    <link href="asset/glightbox/css/glightbox.min.css" rel="stylesheet">
-</head>
+    <link href="asset/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  </head>
 
-<body>
-
-
-
+  <body>
     <div id="vanta-canvas"></div>
 
     <div class="content">
-        <div class="detail-header">
-            <div class="container-fluid px-5">
-                <a href="index.html#portofolio" class="back-btn" data-aos="fade-right">
-                    <i class="bi bi-arrow-left"></i>
-                    Back to Portfolio
+      <div class="detail-header rounded">
+        <div class="container-fluid px-5">
+          <a
+            href="index.html#portofolio"
+            class="back-btn"
+            data-aos="fade-right"
+          >
+            <i class="bi bi-arrow-left"></i>
+            Back to Portfolio
+          </a>
+
+          <h1 class="project-title" data-aos="fade-up" data-aos-delay="100">
+            E-Commerce App
+          </h1>
+          <p class="project-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Full Stack Web Application
+          </p>
+
+          <div class="project-meta" data-aos="fade-up" data-aos-delay="300">
+            <div class="meta-item">
+              <i class="bi bi-calendar3"></i>
+              <span>2024</span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-clock"></i>
+              <span>3 Months Development</span>
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-person"></i>
+              <span>Solo Project</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid px-5 py-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="project-gallery" data-aos="fade-up">
+              <img
+                src="https://picsum.photos/1200/600?random=1"
+                alt="Project Screenshot 1"
+                class="project-gallery-img"
+              />
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="https://picsum.photos/600/400?random=2"
+                    alt="Project Screenshot 2"
+                    class="project-gallery-img"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <img
+                    src="https://picsum.photos/600/400?random=3"
+                    alt="Project Screenshot 3"
+                    class="project-gallery-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section" data-aos="fade-up" data-aos-delay="100">
+              <h3><i class="bi bi-info-circle"></i> Project Overview</h3>
+              <p>
+                Aplikasi e-commerce lengkap dengan fitur keranjang belanja,
+                pembayaran, dan manajemen produk. Platform ini dirancang untuk
+                memberikan pengalaman belanja online yang optimal dengan
+                antarmuka yang modern dan responsif.
+              </p>
+              <p>
+                Aplikasi ini menggabungkan teknologi backend yang powerful
+                dengan frontend yang interaktif, menciptakan solusi e-commerce
+                yang scalable dan mudah digunakan.
+              </p>
+            </div>
+
+            <div class="detail-section" data-aos="fade-up" data-aos-delay="200">
+              <h3><i class="bi bi-list-check"></i> Key Features</h3>
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >Shopping cart dengan real-time update dan persistensi
+                    data</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >Sistem pembayaran yang aman dengan payment gateway
+                    integration</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >Product management dengan CRUD operations untuk admin</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >User authentication dengan JWT dan role-based access
+                    control</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Order tracking dan history transaction</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >Product search dan filtering dengan advanced query</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span
+                    >Responsive design yang optimal untuk mobile dan
+                    desktop</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-section" data-aos="fade-up" data-aos-delay="300">
+              <h3><i class="bi bi-code-slash"></i> Technical Challenges</h3>
+              <p>
+                Selama pengembangan proyek ini, saya menghadapi beberapa
+                tantangan teknis yang menarik. Salah satunya adalah
+                mengoptimalkan performa aplikasi saat menangani ribuan produk
+                dengan gambar yang besar.
+              </p>
+              <p>
+                Saya mengimplementasikan lazy loading untuk images, caching
+                dengan Redis, dan pagination untuk product listings. Hasilnya
+                adalah aplikasi yang fast dan responsive meskipun dengan data
+                yang besar.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div
+              class="detail-section"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <h3><i class="bi bi-tools"></i> Technologies Used</h3>
+              <div class="tech-stack">
+                <span class="tech-badge">Laravel 10</span>
+                <span class="tech-badge">React 18</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Bootstrap 5</span>
+                <span class="tech-badge">REST API</span>
+                <span class="tech-badge">JWT Auth</span>
+                <span class="tech-badge">Git</span>
+              </div>
+            </div>
+
+            <div
+              class="detail-section"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <h3><i class="bi bi-folder"></i> Project Info</h3>
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-calendar"></i>
+                  <span>Started: January 2024</span>
+                </li>
+                <li>
+                  <i class="bi bi-calendar-check"></i>
+                  <span>Completed: March 2024</span>
+                </li>
+                <li>
+                  <i class="bi bi-people"></i>
+                  <span>Team Size: 1 Developer</span>
+                </li>
+                <li>
+                  <i class="bi bi-github"></i>
+                  <span>Repository: Private</span>
+                </li>
+                <li>
+                  <i class="bi bi-star"></i>
+                  <span>Status: Completed</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="detail-section"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <h3><i class="bi bi-link-45deg"></i> Quick Links</h3>
+              <div class="project-actions">
+                <a href="#" class="action-btn primary">
+                  <i class="bi bi-eye"></i>
+                  Live Demo
                 </a>
-
-                <h1 class="project-title" data-aos="fade-up" data-aos-delay="100">E-Commerce App</h1>
-                <p class="project-subtitle" data-aos="fade-up" data-aos-delay="200">Full Stack Web Application</p>
-
-                <div class="project-meta" data-aos="fade-up" data-aos-delay="300">
-                    <div class="meta-item">
-                        <i class="bi bi-calendar3"></i>
-                        <span>2024</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="bi bi-clock"></i>
-                        <span>3 Months Development</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="bi bi-person"></i>
-                        <span>Solo Project</span>
-                    </div>
-                </div>
+                <a href="#" class="action-btn secondary">
+                  <i class="bi bi-github"></i>
+                  GitHub Repo
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="container-fluid px-5 py-5">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="project-gallery" data-aos="fade-up">
-                        <img src="https://picsum.photos/1200/600?random=1" alt="Project Screenshot 1"
-                            class="project-gallery-img">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/400?random=2" alt="Project Screenshot 2"
-                                    class="project-gallery-img">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="https://picsum.photos/600/400?random=3" alt="Project Screenshot 3"
-                                    class="project-gallery-img">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="detail-section" data-aos="fade-up" data-aos-delay="100">
-                        <h3><i class="bi bi-info-circle"></i> Project Overview</h3>
-                        <p>
-                            Aplikasi e-commerce lengkap dengan fitur keranjang belanja, pembayaran, dan manajemen
-                            produk. Platform ini dirancang untuk memberikan pengalaman belanja online yang optimal
-                            dengan antarmuka yang modern dan responsif.
-                        </p>
-                        <p>
-                            Aplikasi ini menggabungkan teknologi backend yang powerful dengan frontend yang
-                            interaktif, menciptakan solusi e-commerce yang scalable dan mudah digunakan.
-                        </p>
-                    </div>
-
-                    <div class="detail-section" data-aos="fade-up" data-aos-delay="200">
-                        <h3><i class="bi bi-list-check"></i> Key Features</h3>
-                        <ul class="feature-list">
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Shopping cart dengan real-time update dan persistensi data</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Sistem pembayaran yang aman dengan payment gateway integration</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Product management dengan CRUD operations untuk admin</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>User authentication dengan JWT dan role-based access control</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Order tracking dan history transaction</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Product search dan filtering dengan advanced query</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Responsive design yang optimal untuk mobile dan desktop</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="detail-section" data-aos="fade-up" data-aos-delay="300">
-                        <h3><i class="bi bi-code-slash"></i> Technical Challenges</h3>
-                        <p>
-                            Selama pengembangan proyek ini, saya menghadapi beberapa tantangan teknis yang
-                            menarik. Salah satunya adalah mengoptimalkan performa aplikasi saat menangani ribuan
-                            produk dengan gambar yang besar.
-                        </p>
-                        <p>
-                            Saya mengimplementasikan lazy loading untuk images, caching dengan Redis, dan
-                            pagination untuk product listings. Hasilnya adalah aplikasi yang fast dan responsive
-                            meskipun dengan data yang besar.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="detail-section" data-aos="fade-left" data-aos-delay="100">
-                        <h3><i class="bi bi-tools"></i> Technologies Used</h3>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Laravel 10</span>
-                            <span class="tech-badge">React 18</span>
-                            <span class="tech-badge">MySQL</span>
-                            <span class="tech-badge">Redis</span>
-                            <span class="tech-badge">Bootstrap 5</span>
-                            <span class="tech-badge">REST API</span>
-                            <span class="tech-badge">JWT Auth</span>
-                            <span class="tech-badge">Git</span>
-                        </div>
-                    </div>
-
-                    <div class="detail-section" data-aos="fade-left" data-aos-delay="200">
-                        <h3><i class="bi bi-folder"></i> Project Info</h3>
-                        <ul class="feature-list">
-                            <li>
-                                <i class="bi bi-calendar"></i>
-                                <span>Started: January 2024</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-calendar-check"></i>
-                                <span>Completed: March 2024</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-people"></i>
-                                <span>Team Size: 1 Developer</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-github"></i>
-                                <span>Repository: Private</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-star"></i>
-                                <span>Status: Completed</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="detail-section" data-aos="fade-left" data-aos-delay="300">
-                        <h3><i class="bi bi-link-45deg"></i> Quick Links</h3>
-                        <div class="project-actions">
-                            <a href="#" class="action-btn primary">
-                                <i class="bi bi-eye"></i>
-                                Live Demo
-                            </a>
-                            <a href="#" class="action-btn secondary">
-                                <i class="bi bi-github"></i>
-                                GitHub Repo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <footer class="footer">
-        <div class="container-fluid p-4 pb-0">
-            <div class="container-fluid text-center mb-4">
-                <h2 class="footer-title">Let's Connect</h2>
-            </div>
-
-            <section class="mb-4 text-center">
-                <a class="footer-social-icon" href="" role="button">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a class="footer-social-icon" href="" role="button">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a class="footer-social-icon" href="https://github.com/NauvalQais" role="button">
-                    <i class="bi bi-github"></i>
-                </a>
-            </section>
+      <div class="container-fluid p-4 pb-0">
+        <div class="container-fluid text-center mb-4">
+          <h2 class="footer-title">Let's Connect</h2>
         </div>
 
-        <div class="text-center footer-copyright">
-            © 2025 Copyright:
-            <span>Nauval Qais</span>
-        </div>
+        <section class="mb-4 text-center">
+          <a class="footer-social-icon" href="" role="button">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a class="footer-social-icon" href="" role="button">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            class="footer-social-icon"
+            href="https://github.com/NauvalQais"
+            role="button"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+        </section>
+      </div>
+
+      <div class="text-center footer-copyright">
+        © 2025 Copyright:
+        <span>Nauval Qais</span>
+      </div>
     </footer>
 
     <script src="asset/aos/aos.js"></script>
@@ -223,221 +272,506 @@
     <script src="asset/isotope-layout/isotope.pkgd.min.js"></script>
 
     <script>
-        // Project data
-        const projectsData = {
-            ecommerce: {
-                title: 'E-Commerce App',
-                subtitle: 'Full Stack Web Application',
-                date: '2024',
-                duration: '3 Months Development',
-                team: 'Solo Project',
-                images: {
-                    main: 'https://picsum.photos/1200/600?random=1',
-                    thumb1: 'https://picsum.photos/600/400?random=2',
-                    thumb2: 'https://picsum.photos/600/400?random=3'
-                },
-                overview: 'Aplikasi e-commerce lengkap dengan fitur keranjang belanja, pembayaran, dan manajemen produk. Platform ini dirancang untuk memberikan pengalaman belanja online yang optimal dengan antarmuka yang modern dan responsif.',
-                overview2: 'Aplikasi ini menggabungkan teknologi backend yang powerful dengan frontend yang interaktif, menciptakan solusi e-commerce yang scalable dan mudah digunakan.',
-                features: [
-                    'Shopping cart dengan real-time update dan persistensi data',
-                    'Sistem pembayaran yang aman dengan payment gateway integration',
-                    'Product management dengan CRUD operations untuk admin',
-                    'User authentication dengan JWT dan role-based access control',
-                    'Order tracking dan history transaction',
-                    'Product search dan filtering dengan advanced query',
-                    'Responsive design yang optimal untuk mobile dan desktop'
-                ],
-                challenges: 'Selama pengembangan proyek ini, saya menghadapi beberapa tantangan teknis yang menarik. Salah satunya adalah mengoptimalkan performa aplikasi saat menangani ribuan produk dengan gambar yang besar.',
-                challenges2: 'Saya mengimplementasikan lazy loading untuk images, caching dengan Redis, dan pagination untuk product listings. Hasilnya adalah aplikasi yang fast dan responsive meskipun dengan data yang besar.',
-                tech: ['Laravel 10', 'React 18', 'MySQL', 'Redis', 'Bootstrap 5', 'REST API', 'JWT Auth', 'Git'],
-                started: 'January 2024',
-                completed: 'March 2024',
-                teamSize: '1 Developer',
-                repo: 'Private',
-                status: 'Completed'
-            },
-            taskmanager: {
-                title: 'Task Manager',
-                subtitle: 'Productivity Application',
-                date: '2024',
-                duration: '2 Months Development',
-                team: 'Solo Project',
-                images: {
-                    main: 'https://picsum.photos/1200/600?random=10',
-                    thumb1: 'https://picsum.photos/600/400?random=11',
-                    thumb2: 'https://picsum.photos/600/400?random=12'
-                },
-                overview: 'Aplikasi manajemen tugas dengan fitur drag & drop untuk mengorganisir workflow. Platform ini membantu tim dan individu dalam mengelola prioritas, deadline, dan kolaborasi secara real-time.',
-                overview2: 'Dibangun dengan arsitektur modern yang memungkinkan scalability dan integrasi dengan berbagai tools produktivitas lainnya.',
-                features: [
-                    'Drag & drop interface untuk task management',
-                    'Real-time collaboration dengan team members',
-                    'Reminder dan notification system',
-                    'Project dashboard dengan progress tracking',
-                    'Task categorization dengan labels dan tags',
-                    'Time tracking dan productivity reports',
-                    'Calendar integration untuk deadline management',
-                    'Comments dan mentions untuk team communication'
-                ],
-                challenges: 'Tantangan terbesar adalah mengimplementasikan real-time updates tanpa mempengaruhi performa. Saya harus memastikan bahwa perubahan yang dilakukan oleh satu user langsung terlihat oleh user lain tanpa delay.',
-                challenges2: 'Solusinya adalah menggunakan WebSocket untuk real-time communication dan mengoptimalkan state management dengan Redux. Hasilnya adalah aplikasi yang responsif dengan sync instan antar user.',
-                tech: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'Prisma', 'WebSocket', 'Tailwind CSS', 'Redux Toolkit', 'Vercel'],
-                started: 'April 2024',
-                completed: 'June 2024',
-                teamSize: '1 Developer',
-                repo: 'Public',
-                status: 'Completed'
-            },
-            mobilebanking: {
-                title: 'Mobile Banking',
-                subtitle: 'Mobile Application',
-                date: '2024',
-                duration: '4 Months Development',
-                team: 'Team Project',
-                images: {
-                    main: 'https://picsum.photos/1200/600?random=20',
-                    thumb1: 'https://picsum.photos/600/400?random=21',
-                    thumb2: 'https://picsum.photos/600/400?random=22'
-                },
-                overview: 'Aplikasi mobile banking dengan fitur lengkap untuk transaksi keuangan. Aplikasi ini menyediakan pengalaman perbankan digital yang aman, cepat, dan mudah digunakan langsung dari smartphone.',
-                overview2: 'Dibangun dengan fokus pada security dan user experience, mengikuti standar industri perbankan untuk memastikan keamanan data dan transaksi nasabah.',
-                features: [
-                    'Transfer antar rekening dan interbank',
-                    'Cek saldo dan mutasi rekening real-time',
-                    'Pembayaran tagihan (listrik, air, BPJS, dll)',
-                    'Top up e-wallet dan mobile credit',
-                    'Biometric authentication (fingerprint & face recognition)',
-                    'QR code payment untuk merchant transactions',
-                    'Virtual account creation untuk payment gateway',
-                    'Push notifications untuk transaction alerts'
-                ],
-                challenges: 'Security adalah prioritas utama dalam aplikasi ini. Saya harus mengimplementasikan multiple layers of security termasuk encryption, secure authentication, dan fraud detection.',
-                challenges2: 'Menggunakan Flutter Secure Storage untuk data sensitif, SSL pinning untuk network communication, dan mengimplementasikan dua-factor authentication. Semua transaksi di-encrypt dengan industry-standard encryption algorithms.',
-                tech: ['Flutter', 'Dart', 'Node.js', 'MongoDB', 'Firebase', 'REST API', 'SSL Pinning', 'CI/CD'],
-                started: 'July 2024',
-                completed: 'November 2024',
-                teamSize: '3 Developers',
-                repo: 'Private',
-                status: 'In Production'
-            }
-        };
+      // Project data
+      const projectsData = {
+        fakultas: {
+          title: "Company Profile Fakultas Teknik",
+          subtitle: "Web Application",
+          date: "2024",
+          duration: "2 Months Development",
+          team: "Solo Project",
+          images: {
+            main: "asset/img/porto/fakultas.png",
+            thumb1: "asset/img/porto/fakultas.png",
+            thumb2: "asset/img/porto/fakultas.png",
+          },
+          overview:
+            "Company Profile untuk Fakultas Teknik yang menyajikan informasi lengkap mengenai profil institusi, program studi, visi-misi, dan fasilitas. Website ini dirancang untuk memberikan citra profesional dan memudahkan akses informasi bagi calon mahasiswa dan akademisi.",
+          overview2:
+            "Dibangun dengan tampilan modern dan responsif, website ini menjadi pintu gerbang digital Fakultas Teknik untuk menjangkau audiens yang lebih luas.",
+          features: [
+            "Landing page dengan hero section interaktif dan slider informasi",
+            "Profil fakultas dan program studi lengkap dengan kurikulum",
+            "Halaman dosen dan staf pengajar dengan biodata",
+            "Informasi berita dan kegiatan fakultas terbaru",
+            "Galeri foto dan video kegiatan akademik",
+            "Form pendaftaran dan kontak online",
+            "Admin dashboard untuk update konten",
+          ],
+          challenges:
+            "Tantangan utama adalah menyajikan informasi yang kompleks (program studi, kurikulum, dosen) dalam tata letak yang bersih dan mudah dinavigasi. Data yang banyak harus diorganisir tanpa membuat tampilan terasa penuh.",
+          challenges2:
+            "Solusinya dengan menggunakan hierarki visual yang jelas dan navigasi breadcrumb. Setiap halaman program studi memiliki template yang konsisten sehingga memudahkan pengunjung menemukan informasi dengan cepat.",
+          tech: ["WordPress", "MySQL"],
+          started: "January 2024",
+          completed: "February 2024",
+          teamSize: "1 Developer",
+          repo: "Private",
+          liveDemo: "https://ftek.masoemuniversity.ac.id/",
+          githubUrl: "",
+          status: "Completed",
+        },
+        lms: {
+          title: "Learning Management System",
+          subtitle: "Web Application",
+          date: "2024",
+          duration: "3 Months Development",
+          team: "Solo Project",
+          images: {
+            main: "asset/img/porto/lms2.png",
+            thumb1: "asset/img/porto/lms2.png",
+            thumb2: "asset/img/porto/lms.png",
+          },
+          overview:
+            "Learning Management System untuk mendukung proses pembelajaran di Fakultas Teknik. Platform ini memungkinkan dosen dan mahasiswa berinteraksi secara digital dalam kegiatan belajar mengajar, mulai dari akses materi hingga evaluasi tugas.",
+          overview2:
+            "Sistem ini dirancang untuk menggantikan proses pembelajaran konvensional dengan platform digital yang terintegrasi dan mudah digunakan oleh seluruh civitas akademika.",
+          features: [
+            "Manajemen kursus dan materi pembelajaran digital",
+            "Sistem upload dan download tugas dengan deadline",
+            "Forum diskusi antar mahasiswa dan dosen",
+            "Kuis dan ujian online dengan timer otomatis",
+            "Database nilai dan rapor digital mahasiswa",
+            "Notifikasi jadwal dan pengumuman akademik",
+            "Role-based access untuk admin, dosen, dan mahasiswa",
+          ],
+          challenges:
+            "Mengelola banyak pengguna sekaligus (dosen dan mahasiswa) dengan hak akses berbeda membutuhkan sistem autentikasi dan otorisasi yang handal. Performa juga harus optimal saat banyak mahasiswa mengakses secara bersamaan.",
+          challenges2:
+            "Mengimplementasikan caching query database dan pagination untuk data nilai dan tugas. Sistem role-based access menggunakan middleware Laravel untuk memisahkan hak akses dosen dan mahasiswa secara ketat.",
+          tech: ["Moodle", "MySQL"],
+          started: "March 2024",
+          completed: "May 2024",
+          teamSize: "1 Developer",
+          repo: "Private",
+          liveDemo: "https://lms.masoemuniversity.ac.id/",
+          githubUrl: "",
+          status: "Completed",
+        },
+        cms: {
+          title: "Content Management System VRDE",
+          subtitle: "Web Application",
+          date: "2024",
+          duration: "3 Months Development",
+          team: "Team Project",
+          images: {
+            main: "asset/img/porto/cms.JPG",
+            thumb1: "asset/img/porto/cms.JPG",
+            thumb2: "asset/img/porto/cms.JPG",
+          },
+          overview:
+            "Content Management System untuk perusahaan VRDE yang memungkinkan pengelolaan konten website secara mandiri. Aplikasi ini memberikan kemudahan bagi tim non-teknis untuk mengelola halaman, artikel, galeri, dan pengaturan website tanpa perlu campur tangan developer.",
+          overview2:
+            "Dibangun dengan arsitektur REST API yang memisahkan backend dan frontend, memungkinkan pengembangan dan maintenance yang lebih fleksibel.",
+          features: [
+            "System editor untuk pembuatan halaman dan artikel",
+            "Manajemen media library dengan upload drag & drop",
+            "User management dengan multiple roles dan permissions",
+            "Sistem workflow approval untuk publikasi konten",
+            "SEO optimization tools untuk setiap halaman",
+            "Analytics dashboard untuk traffic dan engagement",
+            "Backup dan restore data otomatis",
+          ],
+          challenges:
+            "Membangun System editor yang mudah digunakan namun tetap powerful adalah tantangan tersendiri. Selain itu, sistem workflow approval membutuhkan logika state management yang kompleks untuk memastikan konten melalui proses review yang benar.",
+          challenges2:
+            "Menggunakan library editor yang sudah mature (TinyMCE) dan mengimplementasikan state machine pattern untuk workflow approval. REST API dibangun dengan Express.js untuk memberikan endpoint yang terstruktur dan dokumentasi yang jelas.",
+          tech: [
+            "React",
+            "Node.js",
+            "PostgreSQL",
+            "TypeScript",
+            "REST API",
+            "JWT Auth",
+            "Next.js",
+            "Git",
+          ],
+          started: "September 2025",
+          completed: "Desember 2025",
+          teamSize: "2 Developer",
+          repo: "Private",
+          liveDemo: "https://website-vrde-preview.vercel.app/",
+          githubUrl: "",
+          status: "Completed",
+        },
+        facerecognation: {
+          title: "Sistem Absensi Wajah Berbasis AI",
+          subtitle: "Web Application",
+          date: "2024",
+          duration: "3 Months Development",
+          team: "Team Project",
+          images: {
+            main: "asset/img/porto/tawon.png",
+            thumb1: "asset/img/porto/tawon.png",
+            thumb2: "asset/img/porto/tawon.png",
+          },
+          overview:
+            "Sistem absensi berbasis pengenalan wajah menggunakan teknologi kecerdasan buatan. Aplikasi ini memungkinkan pengguna melakukan absensi cukup dengan wajah mereka, menggantikan metode absensi manual yang rentan kecurangan.",
+          overview2:
+            "Dengan akurasi pengenalan tinggi dan proses real-time, sistem ini memberikan solusi absensi yang modern, akurat, dan efisien untuk institusi pendidikan maupun perusahaan.",
+          features: [
+            "Deteksi dan pengenalan wajah real-time dari kamera",
+            "Registrasi wajah pengguna baru dengan multiple angle",
+            "Anti-spoofing untuk mencegah foto/video palsu",
+            "Rekapitulasi absensi harian, bulanan, dan tahunan",
+            "Export laporan ke Excel dan PDF",
+            "Notifikasi keterlambatan dan ketidakhadiran",
+            "Dashboard monitoring absensi real-time",
+          ],
+          challenges:
+            "Tantangan terbesar adalah akurasi pengenalan wajah dalam berbagai kondisi pencahayaan dan angle kamera. Sistem juga harus kebal terhadap percobaan spoofing menggunakan foto atau video.",
+          challenges2:
+            "Menggunakan deep learning model (FaceNet) yang sudah di-preprocess untuk ekstraksi fitur wajah, dilengkapi dengan anti-spoofing detection menggunakan Liveness Detection. Dataset wajah diperkaya dengan variasi pencahayaan dan sudut pandang.",
+          tech: [
+            "Python",
+            "OpenCV",
+            "TensorFlow",
+            "Flask",
+            "jQuery",
+            "MySQL",
+            "FaceNet",
+            "Laravel",
+            "MySQL",
+            "Git",
+          ],
+          started: "Februari 2024",
+          completed: "April 2024",
+          teamSize: "Team Developer",
+          repo: "Private",
+          liveDemo: "",
+          githubUrl: "https://github.com/NauvalQais",
+          status: "Completed",
+        },
+        designsystem: {
+          title: "Design System",
+          subtitle: "UI/UX Design",
+          date: "2024",
+          duration: "1 Month Development",
+          team: "Team Project",
+          images: {
+            main: "asset/img/porto/figma.png",
+            thumb1: "asset/img/porto/figma.png",
+            thumb2: "asset/img/porto/figma.png",
+          },
+          overview:
+            "Design system yang komprehensif untuk memastikan konsistensi antara elemen-elemen UI dan UX dalam pengembangan aplikasi. Mencakup panduan desain, komponen reusable, dan prinsip-prinsip desain yang memudahkan kolaborasi antara desainer dan developer.",
+          overview2:
+            "Dengan design system ini, pengembangan aplikasi menjadi lebih cepat dan konsisten karena semua komponen sudah terstandarisasi dan terdokumentasi dengan baik.",
+          features: [
+            "Design tokens untuk warna, tipografi, dan spacing",
+            "Komponen UI reusable dengan varian dan state lengkap",
+            "Iconography dan ilustrasi yang konsisten",
+            "Grid system dan layout guidelines",
+            "Dark mode dan light mode themes",
+            "Accessibility guidelines (WCAG compliance)",
+            "Prototype interaktif untuk user testing",
+          ],
+          challenges:
+            "Memastikan design system dapat diadopsi dengan mudah oleh seluruh tim pengembang tanpa memerlukan learning curve yang curam. Setiap komponen harus cukup fleksibel untuk berbagai use case namun tetap konsisten.",
+          challenges2:
+            "Membuat dokumentasi interaktif di Figma dengan component properties dan variants yang jelas. Setiap komponen dilengkapi dengan panduan penggunaan dan contoh implementasi dalam berbagai konteks.",
+          tech: ["Figma", "Prototyping"],
+          started: "Juni 2024",
+          completed: "Juli 2024",
+          teamSize: "1 Developer",
+          repo: "N/A",
+          liveDemo: "",
+          githubUrl: "https://github.com/NauvalQais",
+          status: "Completed",
+        },
+        bookmanagement: {
+          title: "Sistem Pengelolaan Buku",
+          subtitle: "Desktop Application",
+          date: "2024",
+          duration: "1 Month Development",
+          team: "Solo Project",
+          images: {
+            main: "asset/img/porto/java.png",
+            thumb1: "asset/img/porto/java.png",
+            thumb2: "asset/img/porto/java.png",
+          },
+          overview:
+            "Aplikasi desktop untuk mengelola koleksi buku dengan fitur pencarian, penambahan, pengeditan, dan penghapusan data buku. Dibangun untuk memudahkan perpustakaan atau kolektor buku dalam mengelola inventaris mereka secara digital.",
+          overview2:
+            "Dengan antarmuka desktop yang responsif dan intuitif, aplikasi ini memberikan pengalaman manajemen data yang cepat dan efisien tanpa perlu koneksi internet.",
+          features: [
+            "CRUD data buku dengan form input lengkap",
+            "Pencarian buku berdasarkan judul, penulis, dan kategori",
+            "Kategorisasi buku dengan tags dan genre",
+            "Tracking status peminjaman dan pengembalian",
+            "Generate laporan koleksi buku dalam format PDF",
+            "Import data buku dari file Excel",
+            "Backup database otomatis",
+          ],
+          challenges:
+            "Membangun aplikasi desktop dengan tampilan yang modern dan responsif menggunakan Java. Tantangan utamanya adalah mengelola koneksi database lokal dan memastikan performa tetap optimal saat menangani ribuan data buku.",
+          challenges2:
+            "Menggunakan JavaFX untuk antarmuka modern dengan CSS styling, dan MySQLite untuk database lokal yang ringan. Implementasi pagination dan lazy loading untuk menjaga performa saat data bertambah besar.",
+          tech: ["Java", "JavaFX", "MySQL", "CSS", "Git"],
+          started: "December 2023",
+          completed: "December 2023",
+          teamSize: "1 Developer",
+          repo: "Public",
+          liveDemo: "",
+          githubUrl: "https://github.com/NauvalQais",
+          status: "Completed",
+        },
+        qrattendance: {
+          title: "Absensi QR Auto Whatsapp",
+          subtitle: "Web Application",
+          date: "2024",
+          duration: "1 Month Development",
+          team: "Solo Project",
+          images: {
+            main: "asset/img/porto/qr.JPG",
+            thumb1: "asset/img/porto/qr.JPG",
+            thumb2: "asset/img/porto/qr.JPG",
+          },
+          overview:
+            "Aplikasi absensi berbasis QR code untuk keperluan pendataan kehadiran di SMP Pasundan Rancaekek. Setiap siswa memiliki QR code unik yang discan saat absensi, dan notifikasi kehadiran langsung dikirim ke WhatsApp orang tua.",
+          overview2:
+            "Sistem ini mengotomatiskan proses absensi yang sebelumnya manual, menghemat waktu dan meningkatkan akurasi data kehadiran serta transparansi kepada orang tua siswa.",
+          features: [
+            "Generate QR code unik untuk setiap siswa",
+            "Scan QR code untuk absensi harian menggunakan kamera",
+            "Notifikasi otomatis ke WhatsApp orang tua siswa",
+            "Rekapitulasi absensi per kelas dan per siswa",
+            "Laporan kehadiran mingguan dan bulanan",
+            "Manajemen data siswa dan kelas",
+            "Export laporan ke Excel untuk wali kelas",
+          ],
+          challenges:
+            "Mengintegrasikan WhatsApp API untuk notifikasi otomatis membutuhkan penanganan yang hati-hati terkait rate limiting dan status pengiriman pesan. QR code juga harus unik dan tidak mudah dipalsukan.",
+          challenges2:
+            "Menggunakan library QR code generation dengan enkripsi data siswa, dan WhatsApp API dengan sistem antrian untuk mengelola pengiriman notifikasi. Setiap percobaan absensi dicatat dalam log untuk audit trail.",
+          tech: [
+            "Laravel",
+            "MySQL",
+            "QR Code API",
+            "WhatsApp API",
+            "Bootstrap 5",
+            "JavaScript",
+            "Git",
+          ],
+          started: "October 2025",
+          completed: "Desember 2025",
+          teamSize: "2 Developer",
+          repo: "Private",
+          liveDemo: "",
+          githubUrl: "https://github.com/NauvalQais",
+          status: "Completed",
+        },
+        ecommerce: {
+          title: "E-Commerce Mobile App",
+          subtitle: "Mobile Application",
+          date: "2025",
+          duration: "2 Months Development",
+          team: "Team Project",
+          images: {
+            main: "asset/img/porto/andro.jpeg",
+            thumb1: "asset/img/porto/andro.jpeg",
+            thumb2: "asset/img/porto/andro.jpeg",
+          },
+          overview:
+            "Aplikasi e-commerce mobile dengan fitur browsing produk, keranjang belanja, dan pembayaran. Dibangun dengan Flutter untuk memberikan pengalaman berbelanja yang mulus di perangkat Android dan iOS.",
+          overview2:
+            "Aplikasi ini menggabungkan desain UI yang modern dan menarik dengan backend yang handal, menciptakan platform belanja online yang user-friendly dan scalable.",
+          features: [
+            "Katalog produk dengan gambar dan deskripsi detail",
+            "Keranjang belanja dengan real-time price calculation",
+            "Sistem checkout dengan multiple payment method",
+            "User authentication dan profile management",
+            "Product search dan filter berdasarkan kategori",
+            "Order tracking dan history pembelian",
+            "Push notification untuk promo dan status pesanan",
+          ],
+          challenges:
+            "Mengoptimalkan performa aplikasi mobile saat menampilkan banyak gambar produk dengan ukuran besar. Pengalaman scroll harus tetap mulus tanpa lag meskipun data produk mencapai ribuan.",
+          challenges2:
+            "Mengimplementasikan lazy loading untuk gambar dengan cached network images, infinite scroll untuk product listing, dan state management dengan Provider. Backend menggunakan REST API dengan Firebase sebagai real-time database.",
+          tech: [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "REST API",
+            "Provider",
+            "Firebase Realtime Database",
+            "Git",
+          ],
+          started: "September 2025",
+          completed: "Desember 2025",
+          teamSize: "2 Developer",
+          repo: "Private",
+          liveDemo: "",
+          githubUrl: "https://github.com/NauvalQais",
+          status: "Completed",
+        },
+      };
 
-        // Get project ID from URL
-        function getProjectId() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id') || 'ecommerce';
+      // Get project ID from URL
+      function getProjectId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("id") || "ecommerce";
+      }
+
+      // Load project data
+      function loadProjectData() {
+        const projectId = getProjectId();
+        const project = projectsData[projectId];
+
+        if (!project) {
+          console.error("Project not found:", projectId);
+          return;
         }
 
-        // Load project data
-        function loadProjectData() {
-            const projectId = getProjectId();
-            const project = projectsData[projectId];
+        // Update page title
+        document.title = project.title + " - Project Detail";
 
-            if (!project) {
-                console.error('Project not found:', projectId);
-                return;
-            }
+        // Update header
+        document.querySelector(".project-title").textContent = project.title;
+        document.querySelector(".project-subtitle").textContent =
+          project.subtitle;
+        document.querySelector(".meta-item:nth-child(1) span").textContent =
+          project.date;
+        document.querySelector(".meta-item:nth-child(2) span").textContent =
+          project.duration;
+        document.querySelector(".meta-item:nth-child(3) span").textContent =
+          project.team;
 
-            // Update page title
-            document.title = project.title + ' - Project Detail';
+        // Update images
+        const mainImg = document.querySelector(".project-gallery > img");
+        const thumb1 = document.querySelector(
+          ".project-gallery .col-md-6:first-child img",
+        );
+        const thumb2 = document.querySelector(
+          ".project-gallery .col-md-6:last-child img",
+        );
 
-            // Update header
-            document.querySelector('.project-title').textContent = project.title;
-            document.querySelector('.project-subtitle').textContent = project.subtitle;
-            document.querySelector('.meta-item:nth-child(1) span').textContent = project.date;
-            document.querySelector('.meta-item:nth-child(2) span').textContent = project.duration;
-            document.querySelector('.meta-item:nth-child(3) span').textContent = project.team;
+        if (mainImg) mainImg.src = project.images.main;
+        if (thumb1) thumb1.src = project.images.thumb1;
+        if (thumb2) thumb2.src = project.images.thumb2;
 
-            // Update images
-            const mainImg = document.querySelector('.project-gallery > img');
-            const thumb1 = document.querySelector('.project-gallery .col-md-6:first-child img');
-            const thumb2 = document.querySelector('.project-gallery .col-md-6:last-child img');
+        // Update overview
+        const overviewPs = document.querySelectorAll(
+          ".detail-section:nth-of-type(2) p",
+        );
+        if (overviewPs[0]) overviewPs[0].textContent = project.overview;
+        if (overviewPs[1]) overviewPs[1].textContent = project.overview2;
 
-            if (mainImg) mainImg.src = project.images.main;
-            if (thumb1) thumb1.src = project.images.thumb1;
-            if (thumb2) thumb2.src = project.images.thumb2;
-
-            // Update overview
-            const overviewPs = document.querySelectorAll('.detail-section:nth-of-type(1) p');
-            if (overviewPs[0]) overviewPs[0].textContent = project.overview;
-            if (overviewPs[1]) overviewPs[1].textContent = project.overview2;
-
-            // Update features
-            const featureList = document.querySelector('.feature-list');
-            if (featureList && project.features) {
-                featureList.innerHTML = project.features.map(feature => `
+        // Update features
+        const featureList = document.querySelector(".feature-list");
+        if (featureList && project.features) {
+          featureList.innerHTML = project.features
+            .map(
+              (feature) => `
                     <li>
                         <i class="bi bi-check-circle-fill"></i>
                         <span>${feature}</span>
                     </li>
-                `).join('');
-            }
-
-            // Update challenges
-            const challengePs = document.querySelectorAll('.detail-section:nth-of-type(3) p');
-            if (challengePs[0]) challengePs[0].textContent = project.challenges;
-            if (challengePs[1]) challengePs[1].textContent = project.challenges2;
-
-            // Update tech badges
-            const techStack = document.querySelector('.tech-stack');
-            if (techStack && project.tech) {
-                techStack.innerHTML = project.tech.map(tech =>
-                    `<span class="tech-badge">${tech}</span>`
-                ).join('');
-            }
-
-            // Update project info
-            const metaItems = document.querySelectorAll('.detail-section:nth-of-type(2) .feature-list li');
-            if (metaItems[0]) metaItems[0].querySelector('span').textContent = 'Started: ' + project.started;
-            if (metaItems[1]) metaItems[1].querySelector('span').textContent = 'Completed: ' + project.completed;
-            if (metaItems[2]) metaItems[2].querySelector('span').textContent = 'Team Size: ' + project.teamSize;
-            if (metaItems[3]) metaItems[3].querySelector('span').textContent = 'Repository: ' + project.repo;
-            if (metaItems[4]) metaItems[4].querySelector('span').textContent = 'Status: ' + project.status;
+                `,
+            )
+            .join("");
         }
 
-        AOS.init({
-            duration: 800,
-            once: true
-        });
+        // Update challenges
+        const challengePs = document.querySelectorAll(
+          ".detail-section:nth-of-type(4) p",
+        );
+        if (challengePs[0]) challengePs[0].textContent = project.challenges;
+        if (challengePs[1]) challengePs[1].textContent = project.challenges2;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            window.scrollTo(0, 0);
-            loadProjectData();
-        });
+        // Update tech badges
+        const techStack = document.querySelector(".tech-stack");
+        if (techStack && project.tech) {
+          techStack.innerHTML = project.tech
+            .map((tech) => `<span class="tech-badge">${tech}</span>`)
+            .join("");
+        }
 
-        window.addEventListener('beforeunload', function () {
-            window.scrollTo(0, 0);
-        });
+        // Update project info
+        const metaItems = document.querySelectorAll(
+          ".detail-section:nth-of-type(2) .feature-list li",
+        );
+        if (metaItems[0])
+          metaItems[0].querySelector("span").textContent =
+            "Started: " + project.started;
+        if (metaItems[1])
+          metaItems[1].querySelector("span").textContent =
+            "Completed: " + project.completed;
+        if (metaItems[2])
+          metaItems[2].querySelector("span").textContent =
+            "Team Size: " + project.teamSize;
+        if (metaItems[3])
+          metaItems[3].querySelector("span").textContent =
+            "Repository: " + project.repo;
+        if (metaItems[4])
+          metaItems[4].querySelector("span").textContent =
+            "Status: " + project.status;
+
+        // Update action buttons
+        const liveDemoBtn = document.querySelector(".action-btn.primary");
+        const githubBtn = document.querySelector(".action-btn.secondary");
+
+        if (project.liveDemo) {
+          liveDemoBtn.href = project.liveDemo;
+          liveDemoBtn.target = "_blank";
+          liveDemoBtn.rel = "noopener noreferrer";
+          liveDemoBtn.style.display = "";
+        } else {
+          liveDemoBtn.style.display = "none";
+        }
+
+        if (project.githubUrl) {
+          githubBtn.href = project.githubUrl;
+          githubBtn.target = "_blank";
+          githubBtn.rel = "noopener noreferrer";
+          githubBtn.style.display = "";
+        } else {
+          githubBtn.style.display = "none";
+        }
+      }
+
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.scrollTo(0, 0);
+        loadProjectData();
+      });
+
+      window.addEventListener("beforeunload", function () {
+        window.scrollTo(0, 0);
+      });
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            VANTA.FOG({
-                el: "#vanta-canvas",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                highlightColor: 0xe90064,
-                midtoneColor: 0x8f2d56,
-                lowlightColor: 0x151729,
-                baseColor: 0x0f172a,
-                blurFactor: 0.6,
-                speed: 1.2,
-                zoom: 0.8
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        VANTA.FOG({
+          el: "#vanta-canvas",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          highlightColor: 0xb3005e,
+          midtoneColor: 0xb3005e,
+          lowlightColor: 0x060047,
+          baseColor: 0x060047,
+          blurFactor: 0.77,
+          speed: 1.8,
+          zoom: 0.5,
         });
+      });
     </script>
 
     <script>
-        var styleElement = document.createElement("style");
-        styleElement.innerHTML =
-            "@font-face {font-family: 'nova'; src: url('asset/text/nova.ttf')}";
-        document.head.appendChild(styleElement);
-        document.body.style.fontFamily = "nova, sans-serif";
+      var styleElement = document.createElement("style");
+      styleElement.innerHTML =
+        "@font-face {font-family: 'nova'; src: url('asset/text/nova.ttf')}";
+      document.head.appendChild(styleElement);
+      document.body.style.fontFamily = "nova, sans-serif";
     </script>
-
-</body>
-
+  </body>
 </html>

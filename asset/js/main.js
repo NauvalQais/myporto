@@ -97,11 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Portfolio card click handler
+    // Portfolio card click/touch handler (for mobile flip support)
     document.querySelectorAll('.portfolio-card').forEach(card => {
         card.addEventListener('click', function(e) {
             if (e.target.closest('a')) return;
-            console.log('Card clicked:', this.querySelector('h4')?.textContent);
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                this.classList.toggle('flipped');
+            }
+        });
+        card.addEventListener('mouseleave', function() {
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                this.classList.remove('flipped');
+            }
         });
     });
 
