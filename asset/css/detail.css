@@ -20,7 +20,7 @@ body {
     margin-top: 80px;
     position: relative;
     overflow: hidden;
-}
+  }
 
 .detail-header::before {
     content: '';

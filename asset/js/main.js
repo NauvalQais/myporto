@@ -146,3 +146,35 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('beforeunload', function() {
     window.scrollTo(0, 0);
 });
+
+// ===== Parallax layers between sections =====
+(function () {
+    const layers = document.querySelectorAll('.parallax-layer');
+    if (!layers.length) return;
+
+    const AMPLITUDE = 140;
+    let ticking = false;
+
+    function updateParallax() {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        layers.forEach(function (layer) {
+            const rect = layer.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const delta = (center - vh / 2) / vh;
+            const speed = parseFloat(layer.getAttribute('data-speed')) || 0.3;
+            const y = delta * AMPLITUDE * speed;
+            layer.style.transform = 'translate3d(0, ' + y.toFixed(1) + 'px, 0)';
+        });
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateParallax);
+    document.addEventListener('DOMContentLoaded', updateParallax);
+    updateParallax();
+})();

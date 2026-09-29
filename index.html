@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,6 +49,23 @@
     <div id="vanta-canvas"></div>
     <div class="content">
       <section class="hero-section container-fluid pt-5 px-5" id="home">
+        <div class="parallax-scene">
+          <span
+            class="parallax-layer orb-pink orb-lg"
+            data-speed="0.25"
+            style="top: 10%; right: -6%"
+          ></span>
+          <span
+            class="parallax-layer orb-light orb-sm"
+            data-speed="0.5"
+            style="top: 42%; left: -4%"
+          ></span>
+          <span
+            class="parallax-layer orb-navy orb-md"
+            data-speed="0.35"
+            style="bottom: -10%; left: 40%"
+          ></span>
+        </div>
         <div class="row justify-content-center align-items-center g-4">
           <div class="col-lg-6 col-md-6 col-12 my-5 py-3">
             <button
@@ -172,12 +190,16 @@
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <img
-                src="asset/img/img-1.png"
-                alt="Profile Picture"
-                class="img-fluid float-image"
-                style="max-width: 300px; height: auto"
-              />
+              <div class="float-image-wrapper">
+                <div class="accent-dot accent-dot-1"></div>
+                <div class="accent-dot accent-dot-2"></div>
+                <div class="accent-dot accent-dot-3"></div>
+                <img
+                  src="asset/img/hero.png"
+                  alt="Profile Picture"
+                  class="img-fluid float-image"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -186,6 +208,23 @@
         class="about-section container-fluid d-flex align-items-center pt-5 px-5"
         id="about"
       >
+        <div class="parallax-scene">
+          <span
+            class="parallax-layer orb-light orb-lg"
+            data-speed="0.2"
+            style="top: -6%; right: -8%"
+          ></span>
+          <span
+            class="parallax-layer orb-pink orb-md"
+            data-speed="0.45"
+            style="top: 30%; left: -6%"
+          ></span>
+          <span
+            class="parallax-layer orb-navy orb-sm"
+            data-speed="0.3"
+            style="bottom: 8%; right: 30%"
+          ></span>
+        </div>
         <div class="row justify-content-center align-items-center g-4">
           <div class="col-12">
             <p
@@ -203,22 +242,7 @@
             >
           </div>
           <div class="col-lg-6 col-md-6 col-12 my-5 py-3">
-            <div
-              class="col-lg-4 col-md-4 col-12 d-flex justify-content-md-end justify-content-center"
-            >
-              <div
-                class="profile-image-wrapper text-center d-md-none d-lg-none d-sm-block d-block"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-              >
-                <img
-                  src="asset/img/w.jpeg"
-                  alt="Profile Picture"
-                  class="img-fluid float-image rounded-circle"
-                  style="max-width: 300px; height: auto"
-                />
-              </div>
-            </div>
+            
             <p class="mt-3">
               <span
                 class="text-title2 d-block"
@@ -275,12 +299,13 @@
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <img
-                src="asset/img/w.jpeg"
-                alt="Profile Picture"
-                class="img-fluid float-image rounded-circle"
-                style="max-width: 300px; height: auto"
-              />
+              <div class="about-image-wrapper">
+                <img
+                  src="asset/img/about.jpeg"
+                  alt="About Me"
+                  class="img-fluid about-image"
+                />
+              </div>
             </div>
           </div>
           <div class="col-12">
@@ -299,7 +324,7 @@
                         ></span>
                       </div>
                       <div class="col-6 text-end">
-                        <span class="total-project">6</span>
+                        <span class="total-project">9</span>
                       </div>
                     </div>
                     <p class="heading">Total Projects</p>
@@ -324,7 +349,7 @@
                         ></span>
                       </div>
                       <div class="col-6 text-end">
-                        <span class="total-project">8</span>
+                        <span class="total-project">12</span>
                       </div>
                     </div>
                     <p class="heading">Certificates</p>
@@ -369,6 +394,23 @@
         class="portofolio-section container-fluid pt-5 px-5 my-5"
         id="portofolio"
       >
+        <div class="parallax-scene">
+          <span
+            class="parallax-layer orb-pink orb-md"
+            data-speed="0.35"
+            style="top: 6%; left: -7%"
+          ></span>
+          <span
+            class="parallax-layer orb-navy orb-lg"
+            data-speed="0.2"
+            style="top: 40%; right: -9%"
+          ></span>
+          <span
+            class="parallax-layer orb-light orb-sm"
+            data-speed="0.55"
+            style="bottom: 4%; left: 42%"
+          ></span>
+        </div>
         <div class="row justify-content-center" id="portofolio">
           <div class="col-12">
             <p
@@ -402,6 +444,107 @@
 
           <div class="col-12">
             <div class="portfolio-grid row mt-5">
+              <div class="col-lg-4 col-md-6" data-category="project">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                  data-project="bprs"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/porto/bprs.png"
+                        alt="Bank Perekonomian Syariah Al Masoem"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>Bank Perekonomian Syariah Al Masoem</h4>
+                        <p>Web Application</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>Bank Perekonomian Syariah Al Masoem</h4>
+                      <p>
+                        Content Management System untuk Bank Perekonomian Syariah
+                        Al Masoem lengkap dengan form pendaftaran nasabah dan
+                        simulasi keuangan.
+                      </p>
+                      <a href="detail.html?id=bprs" class="btn-view"
+                        >View Project <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6" data-category="project">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                  data-project="gmk"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/porto/gmk.png"
+                        alt="GMK - Gerak Menebar Kebaikan"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>GMK - Gerak Menebar Kebaikan</h4>
+                        <p>Web Application</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>GMK - Gerak Menebar Kebaikan</h4>
+                      <p>
+                        Sistem donasi online terintegrasi dengan payment gateway
+                        untuk organisasi Gerak Menebar Kebaikan.
+                      </p>
+                      <a href="detail.html?id=gmk" class="btn-view"
+                        >View Project <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6" data-category="project">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1400"
+                  data-project="mdrive"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/porto/mdrive.png"
+                        alt="M-Drive (Mahkota Drive)"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>M-Drive (Mahkota Drive)</h4>
+                        <p>Web Application</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>M-Drive (Mahkota Drive)</h4>
+                      <p>
+                        Sistem sewa mobil yang dilengkapi tracking GPS, kemampuan
+                        mematikan mobil secara remote, dan pembayaran online
+                        untuk driver.
+                      </p>
+                      <a href="detail.html?id=mdrive" class="btn-view"
+                        >View Project <i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="col-lg-4 col-md-6" data-category="project">
                 <div
                   class="portfolio-card"
@@ -886,6 +1029,120 @@
                   </div>
                 </div>
               </div>
+              <div class="col-lg-4 col-md-6" data-category="certificate">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/sertifikat/9.jpg"
+                        alt="Sertifikat 9"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>Spect Driver Development</h4>
+                        <p>Certificate</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>Spect Driver Development</h4>
+                      <p>
+                        Sertifikasi penerapan pengembangan perangkat lunak,
+                        dengan pola berbasis AI atau Vibe Coding Dengan Kiro dari Dicoding.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-category="certificate">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/sertifikat/10.jpg"
+                        alt="Sertifikat 10"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>Penerapan Data Science Dengan Microsoft Fabric</h4>
+                        <p>Certificate</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>Penerapan Data Science Dengan Microsoft Fabric</h4>
+                      <p>
+                        Sertifikasi penerapan Data Science dengan Microsoft Fabric
+                        yang membahas konsep data science, penggunaan Microsoft
+                        Fabric, dan implementasi model AI yang sudah dibuat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-category="certificate">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/sertifikat/11.jpeg"
+                        alt="Sertifikat 11"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>English Camp</h4>
+                        <p>Certificate</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>English Camp</h4>
+                      <p>
+                        Sertifikasi English Camp yang membahas keterampilan berbahasa Inggris, 
+                        termasuk berbicara, menulis, dan memahami teks dalam bahasa Inggris. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6" data-category="certificate">
+                <div
+                  class="portfolio-card"
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                >
+                  <div class="portfolio-card-inner">
+                    <div class="portfolio-card-front">
+                      <img
+                        src="asset/img/sertifikat/12.jpg"
+                        alt="Sertifikat 12"
+                        class="portfolio-img"
+                      />
+                      <div class="portfolio-overlay">
+                        <h4>Proxmox Server Anti Down</h4>
+                        <p>Certificate</p>
+                      </div>
+                    </div>
+                    <div class="portfolio-card-back">
+                      <h4>Proxmox Server Anti Down</h4>
+                      <p>
+                        Sertifikasi Proxmox Server Anti Down yang membahas konsep
+                        virtualisasi server, penggunaan Proxmox, dan implementasi
+                        solusi server yang handal.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <!-- Tech Stack -->
               <div class="col-lg-3 col-md-4 col-6" data-category="techstack">
@@ -1270,6 +1527,23 @@
         class="contact-section container-fluid pt-5 px-5 my-5"
         id="contact"
       >
+        <div class="parallax-scene">
+          <span
+            class="parallax-layer orb-light orb-md"
+            data-speed="0.4"
+            style="top: 20%; left: -6%"
+          ></span>
+          <span
+            class="parallax-layer orb-pink orb-lg"
+            data-speed="0.2"
+            style="bottom: -12%; right: -8%"
+          ></span>
+          <span
+            class="parallax-layer orb-navy orb-sm"
+            data-speed="0.5"
+            style="top: 55%; right: 20%"
+          ></span>
+        </div>
         <div class="row justify-content-center">
           <div class="col-12">
             <p
