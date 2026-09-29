@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo(0, 0);
 
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCols = document.querySelectorAll('[data-category="project"].col-lg-4');
-    const certCols = document.querySelectorAll('[data-category="certificate"].col-lg-4');
-    const techStackCols = document.querySelectorAll('[data-category="techstack"].col-lg-3');
+    const projectCols = document.querySelectorAll('[data-category="project"]');
+    const certCols = document.querySelectorAll('[data-category="certificate"]');
+    const techStackCols = document.querySelectorAll('[data-category="techstack"]');
 
     // Function to filter cards with animation
     function filterCards(filterValue) {
