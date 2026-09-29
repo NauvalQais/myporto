@@ -58,21 +58,21 @@
           <div class="col-lg-8">
             <div class="project-gallery" data-aos="fade-up">
               <img
-                src="https://picsum.photos/1200/600?random=1"
+                src="asset/img/porto/bprs.png"
                 alt="Project Screenshot 1"
                 class="project-gallery-img"
               />
               <div class="row">
                 <div class="col-md-6">
                   <img
-                    src="https://picsum.photos/600/400?random=2"
+                    src="asset/img/porto/bprs2.png"
                     alt="Project Screenshot 2"
                     class="project-gallery-img"
                   />
                 </div>
                 <div class="col-md-6">
                   <img
-                    src="https://picsum.photos/600/400?random=3"
+                    src="asset/img/porto/bprs2.png"
                     alt="Project Screenshot 3"
                     class="project-gallery-img"
                   />
@@ -80,7 +80,7 @@
               </div>
             </div>
 
-            <div class="detail-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="detail-section" id="overview" data-aos="fade-up" data-aos-delay="100">
               <h3><i class="bi bi-info-circle"></i> Project Overview</h3>
               <p>
                 Aplikasi e-commerce lengkap dengan fitur keranjang belanja,
@@ -145,7 +145,7 @@
               </ul>
             </div>
 
-            <div class="detail-section" data-aos="fade-up" data-aos-delay="300">
+            <div class="detail-section" id="challenges" data-aos="fade-up" data-aos-delay="300">
               <h3><i class="bi bi-code-slash"></i> Technical Challenges</h3>
               <p>
                 Selama pengembangan proyek ini, saya menghadapi beberapa
@@ -185,6 +185,7 @@
               class="detail-section"
               data-aos="fade-left"
               data-aos-delay="200"
+              id="project-info"
             >
               <h3><i class="bi bi-folder"></i> Project Info</h3>
               <ul class="feature-list">
@@ -762,22 +763,13 @@
           project.team;
 
         // Update images
-        const mainImg = document.querySelector(".project-gallery > img");
-        const thumb1 = document.querySelector(
-          ".project-gallery .col-md-6:first-child img",
-        );
-        const thumb2 = document.querySelector(
-          ".project-gallery .col-md-6:last-child img",
-        );
-
-        if (mainImg) mainImg.src = project.images.main;
-        if (thumb1) thumb1.src = project.images.thumb1;
-        if (thumb2) thumb2.src = project.images.thumb2;
+        const galleryImgs = document.querySelectorAll(".project-gallery img");
+        if (galleryImgs[0]) galleryImgs[0].src = project.images.main;
+        if (galleryImgs[1]) galleryImgs[1].src = project.images.thumb1;
+        if (galleryImgs[2]) galleryImgs[2].src = project.images.thumb2;
 
         // Update overview
-        const overviewPs = document.querySelectorAll(
-          ".detail-section:nth-of-type(2) p",
-        );
+        const overviewPs = document.querySelectorAll("#overview p");
         if (overviewPs[0]) overviewPs[0].textContent = project.overview;
         if (overviewPs[1]) overviewPs[1].textContent = project.overview2;
 
@@ -797,9 +789,7 @@
         }
 
         // Update challenges
-        const challengePs = document.querySelectorAll(
-          ".detail-section:nth-of-type(4) p",
-        );
+        const challengePs = document.querySelectorAll("#challenges p");
         if (challengePs[0]) challengePs[0].textContent = project.challenges;
         if (challengePs[1]) challengePs[1].textContent = project.challenges2;
 
@@ -812,9 +802,7 @@
         }
 
         // Update project info
-        const metaItems = document.querySelectorAll(
-          ".detail-section:nth-of-type(2) .feature-list li",
-        );
+        const metaItems = document.querySelectorAll("#project-info .feature-list li");
         if (metaItems[0])
           metaItems[0].querySelector("span").textContent =
             "Started: " + project.started;
@@ -862,6 +850,10 @@
       document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo(0, 0);
         loadProjectData();
+      });
+
+      window.addEventListener("load", function () {
+        AOS.refresh();
       });
 
       window.addEventListener("beforeunload", function () {
