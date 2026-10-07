@@ -632,6 +632,29 @@ body {
     }
 }
 
+/* ===== FULL PAGE SECTIONS ===== */
+html {
+    scroll-padding-top: 90px;
+}
+
+.hero-section,
+.about-section,
+.portofolio-section,
+.contact-section {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section > .col-12 {
+    margin: auto;
+}
+
 /* Section About */
 .about-section {
     overflow-x: hidden;
